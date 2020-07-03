@@ -62,9 +62,6 @@ module: {
   ]
 },
 
-
   ] // end of rules
 } // end of Module 
-
-
 };
