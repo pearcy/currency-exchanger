@@ -60,7 +60,7 @@ module: {
   use: [
     'html-loader'
   ]
-},
+}
 
   ] // end of rules
 } // end of Module 

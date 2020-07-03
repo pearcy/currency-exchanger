@@ -6,10 +6,9 @@ export class DollarCurrency {
     this.currency = currency;
   }
 
-
   async getRates() {
     try {
-      let process = "";
+      // let process = "";
       let response = await fetch(`https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/latest/USD`);
       
       

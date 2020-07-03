@@ -26,6 +26,11 @@ $(document).ready(function() {
       function getElements(response) {
         if (response) {
           $('.showCurrency').text(`The Currency for ${currency} is  ${response.conversion_rates[currency] * amount}`);
+          // console.log(currency);
+          // console.log(response.conversion_rates[currency]);
+
+        } else {
+          console.log("error:" + response);
         }
       }
 
