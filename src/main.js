@@ -18,6 +18,7 @@ $(document).ready(function() {
       (async () => {
         let newDollar = new DollarCurrency(amount, currency);
         let response = await newDollar.getRates();
+        console.log(response);
         
   
         getElements(response);
@@ -30,6 +31,7 @@ $(document).ready(function() {
           // console.log(response.conversion_rates[currency]);
 
         } else {
+          $('.showCurrency').text(`There was a ${response} type error`);
           console.log("error:" + response);
         }
       }
