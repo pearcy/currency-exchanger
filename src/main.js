@@ -13,7 +13,7 @@ $(document).ready(function() {
 
     let amount = parseInt($("#amount-input").val());
     let currency = $("#currency-input").val();
-      // console.log(currency, amount);
+      console.log(currency, amount);
 
       (async () => {
         let newDollar = new DollarCurrency(amount, currency);
@@ -26,7 +26,7 @@ $(document).ready(function() {
 
       function getElements(response) {
         if (response) {
-          $('.showCurrency').text(`The Currency for ${currency} is  ${response.conversion_rates[currency] * amount}`);
+          $('.showCurrency').text(`The Currency for ${currency} is  ${response.rates[currency]}`);
           // console.log(currency);
           // console.log(response.conversion_rates[currency]);
 
