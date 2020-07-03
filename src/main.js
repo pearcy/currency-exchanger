@@ -25,7 +25,7 @@ $(document).ready(function() {
 
       function getElements(response) {
         if (response) {
-          $('.showCurrency').text(`The Currency for ${currency} is  ${response.conversion_rates}`);
+          $('.showCurrency').text(`The Currency for ${currency} is  ${response.conversion_rates[currency] * amount}`);
         }
       }
 

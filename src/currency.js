@@ -19,6 +19,7 @@ export class DollarCurrency {
       } else {
         jsonResponse = false; 
       } 
+      // return jsonifiedResponse;
       console.log(jsonResponse);
     } catch (error) {
         return false; 
