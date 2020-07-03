@@ -1,10 +1,10 @@
 // UI Logic
 
+import { DollarCurrency } from "./../src/currency.js";
 import $ from "jquery";
 import "bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./styles.css";
-import { DollarCurrency } from "./../src/currency.js";
 
 
 $(document).ready(function() {
