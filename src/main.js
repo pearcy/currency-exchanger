@@ -16,14 +16,12 @@ $(document).ready(function() {
       console.log(currency, amount);
 
       (async () => {
-        let newDollar = new DollarCurrency(amount, currency);
+        let newDollar = new DollarCurrency(currency, amount);
         let response = await newDollar.getRates();
-        console.log(response);
-        
-  
         getElements(response);
       })();
 
+     
       function getElements(response) {
         if (response) {
           $('.showCurrency').text(`The Currency for ${currency} is  ${response.rates[currency]}`);

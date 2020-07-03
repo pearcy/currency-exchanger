@@ -8,25 +8,17 @@ export class DollarCurrency {
 
   async getRates() {
     try {
-      // let process = "";
-      // let response = await fetch(`https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/latest/USD`);
-      let response = await fetch(`https://open.exchangerate-api.com/v6/latest`);
-
-      let jsonResponse;
+      let response = await fetch(`https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/latest/USD`);
+      let jsonifiedResponse;
       if (response.ok && response.status == 200) {
-        jsonResponse = await response.json();
-        
+        jsonifiedResponse = await response.json();
       } else {
-        jsonResponse = false; 
-      } 
-      // return jsonifiedResponse;
-      console.log(jsonResponse);
-    } catch (error) {
-        return false; 
+        jsonifiedResponse = false;
       }
+      return jsonifiedResponse;
+    } catch(error) {
+      return false;
+    }
   }
-
-
-
-
 }
+
