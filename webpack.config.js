@@ -19,7 +19,7 @@ plugins: [
   new CleanWebpackPlugin(),
   new Dotenv(),
   new HtmlWebpackPlugin({
-    title: 'Haiku',
+    title: 'Currency',
     template: './src/index.html',
     inject: 'body'
   })
